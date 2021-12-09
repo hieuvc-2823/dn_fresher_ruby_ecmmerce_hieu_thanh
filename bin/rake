@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Show, paging  and Fitler product
+>>>>>>> 0e00ab8... Show, paging  and Fitler product
+
+=======
+>>>>>>> 10fd8e4... Create model user
+=======
+>>>>>>> f0ed324... Init project
+load File.expand_path("spring", __dir__)
+=======
+>>>>>>> f2bc11f... Sing up and log in
+=======
+load File.expand_path("spring", __dir__)
+>>>>>>> 10fd8e4... Create model user
+=======
+load File.expand_path("spring", __dir__)
+>>>>>>> f0ed324... Init project
+=======
+>>>>>>> f2bc11f... Sing up and log in
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> fc6e84141f77330cacecc950bba4624c77780310
+=======
+>>>>>>> 0e00ab8... Show, paging  and Fitler product
+load File.expand_path("spring", __dir__)
+>>>>>>> 10fd8e4... Create model user
+=======
+load File.expand_path("spring", __dir__)
+>>>>>>> f0ed324... Init project
+=======
+>>>>>>> f2bc11f... Sing up and log in
+<<<<<<< HEAD
+=======
+>>>>>>> Show, paging  and Fitler product
+>>>>>>> 0e00ab8... Show, paging  and Fitler product
+>>>>>>> 5deff12... Show, paging  and Fitler product
+>>>>>>> Show, paging  and Fitler product
+>>>>>>> Show, paging  and Fitler product
+>>>>>>> Show, paging, filter product
+=======
+>>>>>>> f2bc11f... Sing up and log in
+require_relative "../config/boot"
+require "rake"
+Rake.application.run

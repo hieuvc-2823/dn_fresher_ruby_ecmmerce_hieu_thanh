@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+load File.expand_path("spring", __dir__)
+=======
+#!/usr/bin/env ruby
+>>>>>>> f2bc11f... Sing up and log in
+APP_PATH = File.expand_path('../config/application', __dir__)
+require_relative "../config/boot"
+require "rails/commands"

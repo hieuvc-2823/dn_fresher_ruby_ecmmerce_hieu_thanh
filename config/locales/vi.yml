@@ -2,8 +2,10 @@ vi:
   application:
     title: "Trang thương mại điện tử"
   Welcome: "Xin chào!"
-  Sign In: "Đăng kí "
-  Sign Up: "Đăng nhập"
+  sign_in: "Đăng nhập"
+  sign_up: "Đăng kí "
+  description: " Thêm dặn dò dành cho chúng tôi"
+  filter: "sắp xếp"
   header:
     Home: "Trang chủ"
     Contact us: "Về chúng tôi"
@@ -49,3 +51,16 @@ vi:
     Street: "Street name 123, ABC"
   errors:
     index: "Không hợp lệ"
+    login:
+      danger: "Email hoặc mật khẩu không chính xác"
+      success: "Đăng nhập thành công"
+    register:
+      success: "Đăng ký thành công"
+  form:
+    register_here: "Đăng ký tại đây"
+    login_here: "Đăng nhập tại đây"
+    name: "Tên"
+    email: "Email"
+    password: "Mật khẩu"
+    password_confirm: "Xác nhận Mật khẩu"
+    error_msg: "Biểu mẫu Chứa %{errors} lỗi"
