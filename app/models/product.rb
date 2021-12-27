@@ -3,15 +3,19 @@ class Product < ApplicationRecord
   has_many :orders, through: :order_details
   has_one_attached :image
   belongs_to :category
-
+  before_create :convert_quantity
   # accepts_nested_attributes_for :category
 
   scope :sort_by_name, ->(keyword){where "name LIKE ?", "%#{keyword}%"}
   scope :order_by, ->(keyword){order keyword}
-  scope :filter_by_category, ->(category){where category_id: category}
-  scope :filter_by_price, ->(order){order(price: order)}
-  scope :filter_by_rate, ->(order){order(rating: order)}
-  scope :filter_by_name, ->(order){order(name: order)}
+  scope :filter_by_category, -> (category){where category_id: category}
+  scope :filter_by_price, -> (order){ order(price: order) }
+  scope :filter_by_rate, -> (order){ order(rating: order)}
+  scope :filter_by_name, -> (order){ order(name: order)}
+  scope :filter_by_type, -> (type_id){Product.joins("INNER JOIN categories
+    ON products.category_id = categories.id
+    AND  categories.parent_id = #{type_id}")}
+
 
   OPTION = {
     all: 1,
@@ -37,5 +41,30 @@ class Product < ApplicationRecord
 
   def display_image_admin
     image.variant resize_to_limit: [300, 200]
+  end
+
+  def display_image_home
+    image.variant resize_to_limit: [267, 268]
+  end
+
+  def display_img_detail
+    image.variant resize_to_limit: [377, 377]
+  end
+
+  class << self
+    def import_file file
+      spreadsheet = Roo::Spreadsheet.open file
+      header = spreadsheet.row(1)
+      rows = []
+      index = 0
+      (2..spreadsheet.last_row).each do |i|
+        rows << spreadsheet.row(i)
+      end
+      import! header, rows
+    end
+  end
+  def convert_quantity
+    self.quantity = self.quantity.to_i
+    self.category_id = self.category_id.to_i
   end
 end
